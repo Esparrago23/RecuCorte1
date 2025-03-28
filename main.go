@@ -1,18 +1,16 @@
 package main
 
 import (
+	_"demo/proyecto/entidad"
 	"demo/proyecto/polling"
 	"demo/proyecto/rutas"
-	"demo/proyecto/entidad"
-"github.com/gin-contrib/cors"
+
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	polling.Productos = []entidad.Producto{
-		{"Laptop", 15000, "LAP123", true},
-		{"Celular", 7000, "CEL456", false},
-	}
+	
 
 	go polling.NotifyLongPolling()
 	r := gin.Default()
@@ -27,4 +25,3 @@ func main() {
 
 	r.Run(":8080")
 }
-
