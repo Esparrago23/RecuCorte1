@@ -7,6 +7,6 @@ type Producto struct {
 	Descuento bool   `json:"descuento"`
 }
 
-var Productos []Producto 
-var ProductosEnDescuento int 
+var Productos []Producto
+var ProductosEnDescuento int
 var NewProductAdded bool
